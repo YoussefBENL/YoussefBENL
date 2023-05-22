@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arbres de mes transformations sociales</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 18px;
+			color: #333;
+
+		}
+		
+		#mon_arbre {
+			width: 100%;
+			height: 100%;
+			position: relative;
+
+		}
+		
+		.node {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			width: 200px;
+			height: 80px;
+			background-color: #f0f0f0;
+			border-radius: 10px;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			line-height:80px;
+			cursor: pointer;
+		}
+		
+		.node:hover {
+			background-color: #d0d0d0;
+		}
+		
+		.text-window {
+			position: absolute;
+			top: -130%;
+			left: 88%;
+			transform: translateX(50%);
+			width: 574px;
+			padding: 100px;
+			background-color: #f0f0f0;
+			border-radius: 50px;
+			line-height:50px;
+			box-shadow: 10px 10px 10px rgba(0, 0, 0,0.5);
+			display: none;
+		}
+		
+		.node.active .text-window {
+			display: block;
+		}
+		h1 {
+		color: #009ac4;
+		}
+        .node-image {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 135%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+        }
+	</style>
+</head>
+<body background="FondEMCYoussef.jpg">
+<h1 align=center><big>Mon Cadre De Vie</big></h1>
+<br><br><br><br><br><br>
+	<div id="mon_arbre">
+	<br>
+		<div class="node" onclick="showImage()">Cellule Familliale
+			<div class="text-window" >
+				Je m’appelle Youssef, je vis actuellement avec mon père, ma mère, mes deux 
+				petits frère Ayoub et Haroun et mes deux sœurs Fatma et Zaieneb et on vit
+				dans un appartement. On est une famille tunisienne qui est venu en France 
+				il y a quelques années.<br> Quand j’aurai 25 ans, je pense vivre avec ma femme
+				dans une maison ou dans un appartement. Je garderai toujours une bonne relation
+				avec ma famille et mes cousins.
+			<img class="node-image" src="TNEMCYoussef.jpg" alt="Tunisie">
+			</div>
+		</div>
+		<div class="node">Cercle Amical
+			<div class="text-window">
+				Au lycée, j’ai plusieurs amis qui m’aide à faire passer le temps
+				en temps de pause. J’ai une bonne relation avec mes cousins, je les 
+				appelle une fois par semaine car ils ne sont pas en France.<br>
+				A 25 ans, je pense que j’aurai des nouveaux amis, des collègues de travail, et pour 
+				mes cousins ils vont peut-être réussir dans la vie et travailler en France 
+
+			</div>
+		</div>
+		<div class="node">Lieux D'Apprentissages
+			<div class="text-window">
+				A la maison, j’essaie d’améliorer mes notes donc je continuer de réviser
+				les matières importantes, mais en dehors du lycée je continu d’apprendre
+				l’Arabe pour ne pas l’oublier et d’apprendre plus sur ma religion soit seul
+				ou avec des vidéos. <br>
+				A 25 ans, je pense continuer d'apprendre l’Arabe car c’est une langue difficile
+				mais aussi d’apprendre plus sur ma religion. Je veux aussi faire de formation pour
+				améliorer mon travail.
+
+			</div>
+		</div>
+		<div class="node">Lieux D'Activités
+			<div class="text-window">
+
+				Actuellement, je fais parfois du foot au stade d'à côté avec des amis et je fais
+				souvent du vélo. A la maison, quand je m'ennuie, je regarde une video youtube pour
+				faire passer le temps
+				<br> A 25 ans, je pense m’inscrire à une salle 
+				de musculation et je vais continuer le foot 
+
+			</div>
+		</div>
+		<div class="node">Réseaux Sociaux
+			<div class="text-window">
+				J’utilise Instagram pour discuter avec des et pour être
+				présent dans les groupes de classe.  <br>
+				A 25 ans, cette situation va changer je pense ne plus utiliser les réseaux sociaux sauf YouTube 
+
+			</div>
+		</div>
+		<div class="node">Lieux De Cultes
+			<div class="text-window">
+				Dans la semaine je vais au moins une fois à la mosquée et à la maison
+				j’essaie d’apprendre plus sur la religion. <br>
+				A 25 ans, je pense améliorer cette situation et de continuer d’apprendre avec ma femme 
+
+			</div>
+		</div>
+		<div class="node" align="right">Animaux De Compagnie
+			<div class="text-window">
+				Je n’ai pas d’animal de compagnie et je ne compte pas en avoir à 25 ans  
+			</div>
+		</div>
+	</div>
+	<script>
+		const nodes = document.querySelectorAll('.node');
+		nodes.forEach(node => {
+			node.addEventListener('click', () => {
+				nodes.forEach(n => n.classList.remove('active'));
+				node.classList.add('active');
+			});
+		});
+	</script>
+	    <script>
+        function showImage() {
+            var image = document.querySelector('.node-image');
+            image.style.display = 'block';
+        }
+    </script>
+<p><font size="2" color="red"><small>BEN LTAIEF Youssef</small></p>
+
+</body>
+</html>
